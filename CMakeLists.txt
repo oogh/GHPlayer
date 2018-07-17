@@ -6,7 +6,11 @@ set(CMAKE_C_STANDARD 11)
 include_directories(/usr/local/Cellar/ffmpeg/3.4.2/include/)
 link_directories(/usr/local/Cellar/ffmpeg/3.4.2/lib/)
 
-add_executable(GHPlayer main.c)
+add_executable( GHPlayer
+                ff_demux.h ff_demux.c
+                video_state.h
+                user_config.h # 用户配置
+                main.c)
 
 target_link_libraries(
         GHPlayer

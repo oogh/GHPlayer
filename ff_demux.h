@@ -1,0 +1,1 @@
+int stream_open(const char *filename);
